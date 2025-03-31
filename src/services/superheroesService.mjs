@@ -15,3 +15,16 @@ export async function buscarSuperHeroesPorAtributo(atributo, value) {
 export async function obtenerSuperHeroesMayoresDe30() {
     return await SuperHeroRepository.obtenerMayoresDe30();
 }
+
+export async function agregarSuperHeroe( nombreSuperHeroe, nombreReal, edad, planetaOrigen, debilidad, poderes, aliados, enemigos ) {
+    return await SuperHeroRepository.agregar( nombreSuperHeroe, nombreReal, edad, planetaOrigen, debilidad, poderes, aliados, enemigos );
+}
+export async function editarSuperHeroe(id, nombreSuperHeroe, nombreReal, edad, planetaOrigen, debilidad, poderes, aliados, enemigos) {
+    return await SuperHeroRepository.editar(id, {nombreSuperHeroe, nombreReal, edad, planetaOrigen, debilidad, poderes, aliados, enemigos});
+}
+export async function eliminarSuperHeroePorId(id) {
+    return await SuperHeroRepository.eliminarPorId(id);
+}
+export async function eliminarSuperHeroePorNombreSuperHeroe(nombreSuperHeroe) {
+    return await SuperHeroRepository.eliminarPorNombreSuperHeroe(nombreSuperHeroe);
+}

@@ -14,3 +14,10 @@ export function renderizarSuperHeroe(superHeroe) {
 export function renderizarSuperHeroes(superHeroes) {
     return superHeroes.map(superHeroe => renderizarSuperHeroe(superHeroe));
 }
+
+export function renderizarSuperHeroeEditado(antes, despues) {
+    return {
+        Antes: renderizarSuperHeroe(antes),
+        Despues: renderizarSuperHeroe(despues)
+    };
+}

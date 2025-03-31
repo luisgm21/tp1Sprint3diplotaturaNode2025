@@ -9,7 +9,7 @@ const superHeroSchema = new mongoose.Schema({
     poderes: [String],
     aliados: [String],
     enemigos: [String],
-    creador: String,
+    creador: {type: String, default: 'Gonzalo Morelli'},
     createdAt: { type: Date, default: Date.now }
 });
 
